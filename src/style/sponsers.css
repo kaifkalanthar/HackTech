@@ -1,0 +1,35 @@
+.sponsers-img{
+    width: 240px;
+    height: 90px;
+    padding: 20px;
+}
+.sponsers{
+    width: 80%;
+    margin: auto;
+}
+.sponsers-container{
+    text-align: center;
+}
+.sponser-lists{
+    display: flex;
+}
+.sponsers-header{
+    text-align: center;
+    font-size: 60.678px;
+    font-weight: 100;
+}
+@media screen and (max-width : 594px) {
+    .sponsers{
+        width: 80%;
+        margin:0 20px;
+    }
+    .sponsers-img{
+        width: 240px;
+        height: 90px;
+    }
+    .sponsers-header{
+        text-align: center;
+        font-size: 40.678px;
+        font-weight: 100;
+    }
+}
