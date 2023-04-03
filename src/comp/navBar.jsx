@@ -9,13 +9,9 @@ const NavBar = () => {
     }
     return (
             <div className='navbar'>
-                <div className='navbar-container'>
-                    <div className='logo-container'>
-                        <h3 className='logo'>HACKTECH</h3>
-                    </div>
-
-                    {
-                        clicked && <ul className="menu-lists">
+                
+                    <h3 className='logo'>HACKTECH</h3>
+                    {clicked && <ul className="menu-lists">
                             <li className="menu-list"><a href="/" className="menu-item">HOME</a></li>
                             <li className="menu-list"><a href="/" className="menu-item">PROBLEMS</a></li>
                             <li className="menu-list"><a href="/" className="menu-item">CONTACT US</a></li>
@@ -25,7 +21,7 @@ const NavBar = () => {
                         onClick={handleOnClick}
                         id="toggle">
                     </i>
-                </div>
+                
         </div>
     );
 }
