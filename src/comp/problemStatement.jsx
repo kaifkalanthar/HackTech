@@ -1,53 +1,44 @@
 import React from 'react';
+import PsCards from './common/psCard';
+import { NavLink } from 'react-router-dom';
 
 const ProbStament = () => {
     const data = [
         {
             ps_no: 1,
-            title: "Series Forecasting with Neural Networks",
-            about: `Build an AI model that can accurately predict
-        future trends and patterns in time series data, such as stock prices,
-        weather forecasts, or energy consumption`
+            title: "New age women safety app",
+            about: `Design and develop a Women safety app that automatically senses 
+            the danger to a mobile user and triggers
+             an SOS alert with location details based
+              on multimodal data from a mobile device
+               such as audio, video, image, motion 
+               detection etc., given a situation that
+                the user is not able to operate the mobile.`
         },
         {
             ps_no: 2,
-            title: "Developing an open-source",
-            about: `platform for the creation and management
-             of sustainable agricultural supply chains, utilizing
-            blockchain technology for increased transparency and traceability.`
+            title: "Obscenity blocker solution",
+            about: `Design and develop a 
+            technological solution for identifying and blocking any obscene media (image/video/audio) at the user’s end. The solution should be able to send alerts to the concerned nodal agency in case of the spread of such content. The solution may be in the form of a desktop/mobile application or a web browser plugin.`
         },
         {
             ps_no: 3,
-            title: "Encryption and Decryption",
-            about: `Build a tool that can encrypt and decrypt 
-            sensitive data, such as passwords, credit card numbers, 
-            and confidential documents, using strong 
-            cryptographic algorithms and key management practices.`
+            title: "Advanced fake news detection system",
+            about: `Design and develop a technological solution/software tool for Tracking & Tracing Fake News and its origin using official sources as the input filter. The solution should have a mechanism to mitigate the impact of the spread of Fake News by auto-populating the fake news spreaders’ inboxes with the official/authenticated news content.`
         },
         {
             ps_no: 4,
-            title: "Explainable AI for Medical Diagnosis",
-            about: `Develop an ML model that can diagnose medical
-             conditions based on patient data, while also providing 
-             transparent and interpretable explanations of its decisions, 
-             to help doctors and patients understand the reasoning behind the diagnosis`
+            title: "Phishing Detection Solution",
+            about: `Design and develop a technological solution for AI-enabled Phishing Links Detection and Alert System. The solution should be able to identify the source of phishing attacks in web pages, email apps, social media, instant messenger apps, text messages etc. The solution may be in the form of a desktop/mobile application or a web browser plugin.`
         }
     ]
     return (
         <div className="ps">
             <h1 className="ps-header">PROBLEM STATEMENT</h1>
             <div className="ps-table">
-                {data.map(d => (
-                    <div className="ps-cards">
-                        <h1 className="ps-no">{d.ps_no}</h1>
-                        <div className='ps-content'>
-                            <h1 className='ps-title'>{d.title}</h1>
-                            <p className="ps-des">{d.about}</p>
-                        </div>
-                    </div>
-                ))}
+                <PsCards data={data}/>
             </div>
-            <button className="btn">View</button>
+            <NavLink className="btn" to = "ps">View</NavLink>
         </div>
     );
 }
