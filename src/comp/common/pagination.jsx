@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import { NavLink } from 'react-router-dom';
 
 const Pagination = ({ totalCount, pageSize, currentPage, onPageChange }) => {
     const pagesCount = Math.ceil(totalCount / pageSize);
@@ -7,12 +8,11 @@ const Pagination = ({ totalCount, pageSize, currentPage, onPageChange }) => {
     return (  
         <div className="pagination">
   <ul className="pagination-pages">
-  
     {pages.map(page => (
         <li 
         className= {page === currentPage? "pagination-page-active": "pagination-page"}
          key={page}>
-            <a onClick={() => onPageChange(page)}>{page}</a>
+            <NavLink onClick={() => onPageChange(page)} >{page}</NavLink>
         </li>
     ))}
   </ul>
