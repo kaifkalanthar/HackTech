@@ -296,6 +296,16 @@ body {
     .copy-right{
       text-align: center;
     }
+    .contact{
+      text-align: center;
+      font-size: 20px;
+      padding: 20px;
+      font-weight: 100;
+      .contact-no{
+        font-weight: 500;
+      }
+    }
+  
   }
 
   @media screen and (max-width: 830px) {
