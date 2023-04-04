@@ -68,7 +68,7 @@ body {
 
     #toggle {
       font-size: 30px;
-
+      cursor: pointer;
     }
   }
 
@@ -110,7 +110,11 @@ body {
       transition: 0.2s ease;
       text-align: center;
     }
-
+    .btn-a {
+      text-decoration: none;
+      color: #fff;
+      padding: 30px;
+    }
     .btn:hover {
       width: 150px;
       height: 50px;
@@ -125,6 +129,7 @@ body {
     }
 
 
+
   }
 
   .ps {
@@ -137,6 +142,7 @@ body {
       font-size: 30px;
       font-weight: 100;
       text-align: center;
+      padding: 30px;
     }
 
     .ps-cards {
@@ -168,7 +174,11 @@ body {
     }
 
     .btn {
-      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      margin: 20px auto;
       width: 140px;
       height: 50px;
       border: none;
@@ -177,13 +187,16 @@ body {
       font-family: 'poppins', sans-serif;
       font-weight: 200;
       font-size: 14px;
+      text-align: center;
       cursor: pointer;
       transition: 0.2s ease;
-      text-align: center;
     }
 
     .btn:hover {
-      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
       width: 150px;
       height: 50px;
       border: 2px solid $primarycolor;
@@ -193,6 +206,94 @@ body {
       font-size: 14px;
       cursor: pointer;
       transition: 0.2s ease;
+      text-align: center;
+    }
+.ps-des {
+  font-weight: 200px;
+}
+  }
+
+  .rules{
+    border-radius: 10px;
+    background-color: $secondarycolor;
+    margin: 30px 0;
+    .rules-header{
+      font-size: 30px;
+      font-weight: 100;
+      text-align: center;
+      padding: 10px;
+    }
+    .r-lists{
+      margin: auto;
+      text-align: center;
+      list-style: none;
+      padding: 10px 0;
+    }
+  }
+
+  .sponsers{
+    .sponsers-header{
+      text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    }
+    .sponsers-list{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .sponsers-img{
+      padding: 30px 0px;
+    }
+  }
+  .date{
+    text-align: center;
+    padding: 50px;
+    .date-header{
+      font-size: 30px;
+      font-weight: 100;
+    }
+    .date-imgs{
+      display: none;
+    }
+  }
+
+  .footer{
+    width: 100%;
+    padding: 20px 0;
+    background-color: $tricolor;
+    position: absolute;
+    left: 0;
+    .footer-header{
+      text-align: center;
+      font-size: 28px;
+      font-weight: 300;
+      padding: 12px 0 0 0;
+    }
+    .footer-sub{
+      text-align: center;
+      font-size: 16px;
+      font-weight: 100;
+    }
+    .socials{
+      display: flex;
+      column-gap: 30px;
+      list-style: none;
+      justify-content: center;
+      transition: 0.3s ease-in-out;
+    }
+    .social-list{
+      padding:  10px 15px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    .social-list:hover{
+      padding:  10px 15px;
+      cursor: pointer;
+      transform: translate(5px,5px);
+    }
+    .copy-right{
       text-align: center;
     }
   }
@@ -206,6 +307,11 @@ body {
     .home-page {
       padding: 30px 15px;
       flex-direction: column;
+    }
+    .date{
+      .date-img{
+        width: 500px;
+      }
     }
   }
 
@@ -237,6 +343,25 @@ body {
 
       .ps-content {
         width: 86.2%;
+      }
+    }
+
+    .sponsers{
+      .sponsers-img{
+        width: 350px;
+      }
+    }
+    .date{
+      padding: 0;
+      .date-img{
+        padding: 0;
+        display: none;
+      }
+      .date-imgs{
+        margin: auto;
+        padding: 0;
+        width: 300px;
+        display: block;
       }
     }
   }

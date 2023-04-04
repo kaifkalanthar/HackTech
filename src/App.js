@@ -1,14 +1,17 @@
-import HomePage from "./comp/homePage";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./comp/navBar";
-import ProbStament from "./comp/problemStatement";
+import Home from "./comp/home";
+import AllPs from "./comp/allPs";
 
 
 function App() {
   return (
     <>
       <NavBar />
-      <HomePage />
-      <ProbStament />
+      <Routes>
+      <Route path="/" element = {<Home/>}/>
+      <Route path="/ps" element = {<AllPs/>}/>
+      </Routes>
     </>
   );
 }
