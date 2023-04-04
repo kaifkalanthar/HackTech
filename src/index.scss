@@ -305,8 +305,60 @@ body {
         font-weight: 500;
       }
     }
-  
   }
+
+  @mixin pagination-text {
+    color: #111;
+    font-size: 1rem;
+  }
+  .pagination-pages {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    .pagination-page-active {
+      display: inline-block;
+      background: $primarycolor;
+      margin: 0.25rem 0.25rem;
+      border-radius: 10px;
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 20px;
+      }
+    }
+    .pagination-page {
+      padding: 10px;
+      display: inline-block;
+      background: $secondarycolor;
+      margin: 0.25rem 0.25rem;
+      border-radius: 10px;
+      transition: 0.1s ease;
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
+    .pagination-page:hover {
+      padding: 10px;
+      display: inline-block;
+      background: $tricolor;
+      margin: 0.25rem 0.25rem;
+      border-radius: 10px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  
 
   @media screen and (max-width: 830px) {
     .navbar {

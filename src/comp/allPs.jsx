@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PsCards from './common/psCard';
 import Footer from './common/footer';
+import Pagination from './common/pagination';
+import { paginate } from '../utils/paginate';
 
 const AllPs = () => {
     const data = [
@@ -125,14 +127,27 @@ const AllPs = () => {
         }
 
     ]
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemCount = data.length;
+    const pageSize = 5;
+    const handlePageChange = (page) =>{
+        setCurrentPage(page);
+    }
+    const ps = paginate(data, currentPage, pageSize);
     return (
         <React.Fragment>
         <div className="ps">
             <h1 className="ps-header">PROBLEM STATEMENT</h1>
             <div className="ps-table">
-                <PsCards data={data}/>
+                <PsCards data={ps}/>
             </div>
         </div>
+        <Pagination 
+        totalCount = {itemCount}
+        pageSize={pageSize}
+        currentPage = {currentPage}
+        onPageChange = {handlePageChange}
+        />
         <Footer/>
         </React.Fragment>
      );
