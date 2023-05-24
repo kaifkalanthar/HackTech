@@ -357,8 +357,219 @@ body {
       }
     }
   }
-
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .title {
+      color: #eee;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 100;
+    }
+    .subtitle {
+      color: #eee;
+      text-align: center;
+      font-size: 16px;
+      font-weight:100;
+      margin-top: 10px;
+    }
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+  .input-container {
+    
+    height: 50px;
+    position: relative;
+    width: 40%;
+    text-align: center;
+  }
   
+  .ic1 {
+    margin: 20px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  
+  .input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  .alert{
+    color: #ff4545;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: start;
+    padding-left: 10px;
+  }
+  
+  .cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  }
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  .input {
+    &:focus ~ .cut, &:not(:placeholder-shown) ~ .cut {
+      transform: translateY(8px);
+    }
+  }
+  
+  .placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  
+  .input {
+    &:focus ~ .placeholder {
+      transform: translateY(-30px) translateX(10px) scale(0.75);
+    }
+  
+    &:not(:placeholder-shown) ~ .placeholder {
+      transform: translateY(-30px) translateX(10px) scale(0.75);
+      color: #808097;
+    }
+  
+    &:focus ~ .placeholder {
+      color: #fff;
+    }
+  }
+  .submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 20px auto;
+    width: 140px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    background: $primarycolor;
+    font-family: 'poppins', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .submit:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 150px;
+    height: 50px;
+    border: 2px solid $primarycolor;
+    background: none;
+    font-family: 'poppins', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    text-align: center;
+  }
+  } 
+
+}   
+.responsive-table {
+  padding-top: 30px;
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: $secondarycolor;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    color: #111;
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+      
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
 
   @media screen and (max-width: 830px) {
     .navbar {
@@ -426,5 +637,17 @@ body {
         display: block;
       }
     }
+
+    .form-container{
+      .form{
+        padding: 0;
+        .input-container{
+          width: 100%;
+          height: 60px;
+        }
+      }
+    }
+    
   }
+  
 }

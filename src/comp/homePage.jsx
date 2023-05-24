@@ -1,5 +1,6 @@
 import React from 'react';
 import hero from '../externals/hero.svg';
+import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
     return (
@@ -13,9 +14,9 @@ const HomePage = () => {
                     The goal of a hackathon is to encourage collaboration,
                     problem-solving, and creativity in a fast-paced and intense
                     environment.</p>
-                <button className="btn"><a
+                <button className="btn"><NavLink
                     className='btn-a'
-                    href='https://docs.google.com/forms/d/e/1FAIpQLSfCS3GgMGzyOHKa4jRbQ7zVRTHQsGuV4ruWBdBurVk3vuJGyg/viewform?pli=1&pli=1'>Register</a></button>
+                    to = '/register'>Register</NavLink></button>
             </div>
             <img src={hero} alt="" className='home-img' />
         </div>
