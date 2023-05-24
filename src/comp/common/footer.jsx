@@ -6,9 +6,7 @@ import twitter from '../../externals/twitter.png';
 const Footer = () => {
     return ( 
         <div className="footer">
-        <h1 className="footer-header">HACKTECH</h1>
-        <p className="contact">Phone <span className="contact-no">{`+91 93720 90474`}</span></p>
-
+            <h1 className="footer-header">HACKTECH</h1>
         <p className="footer-sub">FOLLOW US ON</p>
         <ul className="socials">
             <li className="social-list"><img src={linkedin} alt="" /></li>
