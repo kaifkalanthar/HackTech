@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class RegisteredTeams extends Component {
     state = { teams: [] }
     async componentDidMount() {
-        const { data: teams } = await axios.get("https://hackapi.onrender.com/api/register");
+        const { data: teams } = await axios.get("https://hachtechapi-kucp.onrender.com/post");
         this.setState({ teams });
     }
     render() {
