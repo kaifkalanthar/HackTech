@@ -42,7 +42,7 @@ class RegisterForm extends Form {
     doSubmit = async () => {
         try {
             const { data } = this.state;
-            const res = await axios.post("https://hackapi.onrender.com/api/register", {
+            const res = await axios.post("https://hachtechapi-kucp.onrender.com/post", {
                 team_name: data.team_name,
                 leader_name: data.team_lead,
                 ps_number: data.ps_number,
